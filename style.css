@@ -78,8 +78,7 @@ main>#produit>img:hover{
 }
 @media screen and (min-width: 800px) and (max-width: 900px){
     main>#produit>img{
-        width: 45em;
-    }
+        width: 45em;}
 
 }
 @media screen and (min-width: 900px) and (max-width: 1007px){
@@ -98,7 +97,7 @@ main>#produit>img:hover{
         width: 80.4em;
         transition: none;
     }
-    main>#produit>img{
+    main>#produit>img:hover{
         transform: none;
     }
 }
