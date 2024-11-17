@@ -19,6 +19,7 @@ header>#figure{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 header>#figure>img{       
     width: 100%;
@@ -121,6 +122,7 @@ main>#avis>p{
 main>#avis>.flexlign>img{
     width: 1.5rem;
     height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 main>#avis>.flexlign{
     display: flex;
@@ -152,6 +154,7 @@ main>#avis>.flexlign{
     width: 2rem;
     height: auto;
     margin: 0 auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
 }
 #button{
     width: 4rem;
@@ -165,7 +168,9 @@ main>#avis>.flexlign{
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombre simple */
+    transition: box-shadow 0.3s ease; /* Animation au survol */
 }
 #button:active{
     transform:translate(0,5px);
@@ -179,3 +184,62 @@ main>#avis>.flexlign{
     color: #fff;
     text-shadow: 0.1rem 0.15rem 0.1rem #1D4126;
 }
+#media{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+#media>a>img{
+   width: 1.2rem;
+   height: auto;
+   padding: 1.5rem 0.1rem;
+   display: inline-block;
+}
+#merci{
+    position: relative;
+}
+#merci>img{
+    width: 100%;
+    height: 7em;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+#merci>p{
+    position: absolute;
+    top: 10%; /* Ajuste pour le positionner vers le haut (ajuste selon tes besoins) */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 100;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-size: 0.45rem;
+    font-weight: bold;
+    color: #1D4126;
+    background-color: #D9D9D9; 
+    opacity: 0.7;
+}
+
+@media screen and (min-width: 300px) and (max-width: 900px){
+    main > #presentation {
+        display: flex; 
+        flex-direction: column;
+    }
+    main > #presentation > .pres{
+        margin-top: 1em;
+    }
+    #presentation{
+        background-color: #F8EAE4;
+        box-shadow: none;
+    }
+    main>#produit>img:hover{
+        transform: scale(2);
+    }
+}
+@media screen and (max-width: 900px){
+    main>#produit>img:hover{
+        transform: none;
+    }
+}
+
